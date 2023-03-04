@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="ExpandingWeb_Ai::core"
+             title="Expanding Web"
+             module="ExpandingWeb_Ai"
+             translate="title"
+             sortOrder="80"
+             resource="ExpandingWeb_Ai::core"/>
+        <add id="ExpandingWeb_Ai::ai"
+             title="ExpandingWeb Ai"
+             module="ExpandingWeb_Ai"
+             translate="title"
+             sortOrder="10"
+             parent="ExpandingWeb_Ai::core"
+             resource="ExpandingWeb_Ai::ai"/>
+        <add id="ExpandingWeb_Ai::configuration"
+             title="Configuration"
+             module="ExpandingWeb_Ai"
+             translate="title"
+             sortOrder="10"
+             parent="ExpandingWeb_Ai::ai"
+             action="admin/system_config/edit/section/expanding_web_ai"
+             resource="ExpandingWeb_Ai::configuration"/>
+        <add id="ExpandingWeb_Ai::log"
+             title="Ai Log"
+             module="ExpandingWeb_Ai"
+             translate="title"
+             sortOrder="20"
+             parent="ExpandingWeb_Ai::ai"
+             resource="ExpandingWeb_Ai::log"
+             action="expandingweb_ai/log/index"/>
+    </menu>
+</config>

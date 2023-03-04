@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="controller_action_catalog_product_save_entity_after">
+        <observer name="ExpandingWeb_Ai::save_product" instance="ExpandingWeb\Ai\Observer\SaveProduct"/>
+    </event>
+    <event name="catalog_category_prepare_save">
+        <observer name="ExpandingWeb_Ai::save_category" instance="ExpandingWeb\Ai\Observer\SaveCategory"/>
+    </event>
+    <event name="cms_page_prepare_save">
+        <observer name="ExpandingWeb_Ai::save_cms_page" instance="ExpandingWeb\Ai\Observer\SaveCmsPage"/>
+    </event>
+</config>
