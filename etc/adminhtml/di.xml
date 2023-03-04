@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Cms\Api\BlockRepositoryInterface">
+        <plugin name="ExpandingWeb_Ai::save_cms_block"
+                type="ExpandingWeb\Ai\Plugin\Magento\Cms\Api\BlockRepositoryInterface"
+                sortOrder="10"/>
+    </type>
+</config>
